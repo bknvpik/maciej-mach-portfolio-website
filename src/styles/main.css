@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
 
 :root {
-    --color-accent: #1AA1E5;
-    --color-bg-light: #0C1113;
-    --color-bg-dark: #06090A;
-    --color-txt-body: #ECF4F9;
+  --color-accent: #1AA1E5;
+  --color-bg-light: #0C1113;
+  --color-bg-dark: #06090A;
+  --color-bg-review: #161B1D;
+  --color-txt-body: #ECF4F9;
 }
 
 *,
 *::before,
 *::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 body,
@@ -21,5 +22,355 @@ h2,
 h3,
 h4,
 p {
-    margin: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
+
+img {
+  max-width: 100%;
+}
+
+.txt-title {
+  color: white;
+  font-size: 2em;
+}
+
+.txt-body {
+  color: var(--color-txt-body);
+  font-size: 14px;
+}
+
+.bg-light {
+  background-color: var(--color-bg-light);
+}
+
+.bg-dark {
+  background-color: var(--color-bg-dark);
+}
+
+.enter-line-break {
+  white-space: pre-line;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 1em 1em 1.5em 1em;
+}
+
+header {
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+nav {
+  height: 100%;
+}
+
+#nav-desktop {
+  display: none;
+}
+
+#menu-icon {
+  height: 2em;
+  width: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.menu-icon-line {
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: var(--color-txt-body);
+}
+
+#main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg-dark);
+}
+
+#landing-page {
+  height: 100%;
+  z-index: -2;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-txt {
+  width: 100%;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 2em 1em; 
+}
+
+#main-txt h1 {
+  font-size: 36px;
+  color: white;
+}
+
+#main-img {
+  margin-bottom: calc(1em-10px);
+  height: 100%;
+  background-image: url('../assets/images/maciej.jpg');
+  background-size: cover;
+  filter: drop-shadow(-10px 10px 0px white);
+}
+
+.action-button {
+  all: unset;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--color-accent);
+  padding: 1.5em;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 0px 5px 20px rgba(25, 162, 230, 0.4);
+}
+
+section {
+  padding: 2em 1em;
+}
+
+article {
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+article .action-button {
+  margin-bottom: 0.5em;
+}
+
+#big-img {
+  width: 100%;
+  height: calc(100vh - 18.25em);
+  background-image: url('../assets/images/why_me.jpg');
+  background-size: cover;
+  filter: drop-shadow(-10px 10px 0px white);
+}
+
+#reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding-bottom: 2em;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-review);
+}
+
+.review-img-container {
+  height: 15.625em;
+  width: 100%;
+  display: flex;
+}
+
+.reviev-img {
+  flex: 1;
+}
+
+.review-img img {
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.review-txt {
+  color: var(--color-txt-body);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.reviewer-details {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.review-txt p:nth-child(3) {
+  margin-top: 0.5em;
+}
+
+/* #main-container {
+  max-width: 100vw;
+  color: white;
+}
+
+#main-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-dark);
+  z-index: -2;
+}
+
+.hide-overflow {
+  overflow: hidden;
+}
+
+.elipses {
+  filter: blur(300px);
+  position: absolute;
+  width: 544px;
+  height: 544px;
+  z-index: -10;
+}
+
+#elipse-1 {
+  left: -43px;
+  top: 173px;
+  background: rgba(25, 161, 229, 0.2);
+}
+
+#elipse-2 {
+  left: 334px;
+  top: -162px;
+  background: rgba(58, 51, 203, 0.2);
+}
+
+#elipse-3 {
+  right: 178px;
+  top: -142px;
+  background: rgba(25, 161, 229, 0.2);
+}
+
+#elipse-4 {
+  right: 370px;
+  top: 396px;
+  background: rgba(64, 191, 191, 0.2);
+}
+
+header {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1em;
+}
+
+nav {
+  height: 2.5em;
+  min-width: 2.5em;
+}
+
+#nav-desktop {
+  display: none;
+}
+
+#nav-mobile {
+  height: 100%;
+  width: 100%;
+  padding: 0.5em 0.5em;
+}
+
+.nav-link {
+  all: unset;
+  cursor: pointer;
+  margin-left: 2em;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+main {
+  height:100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#landing-txt-mobile, #landing-txt-desktop {
+  white-space: pre-line;
+  font-weight: 600;
+}
+
+#landing-txt-mobile {
+  font-size: 2.25em;
+}
+
+#landing-txt-desktop {
+  display: none;
+  font-size: 4em;
+}
+
+#main-txt {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+#small-land-txt-mobile {
+  font-size: 1em;
+}
+
+#small-land-txt-desktop {
+  display: none;
+  font-size: 1.5em;
+}
+
+#main-img {
+  width: 100%;
+  height: 60%;
+  z-index: -1;
+}
+
+.action-button {
+  all: unset;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--color-accent);
+  padding: 1em;
+  border-radius: 15px;
+  color: black;
+  font-weight: 500;
+  box-shadow: 0px 5px 20px rgba(25, 162, 230, 0.4);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0% 0%;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: -10px 10px 0px 0px var(--color-txt-body);
+  -moz-box-shadow: -10px 10px 0px 0px var(--color-txt-body);
+  box-shadow: -10px 10px 0px 0px var(--color-txt-body);
+} */

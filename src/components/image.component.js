@@ -1,0 +1,9 @@
+class ImageComponent {
+  template() {
+    
+  }
+
+  render() {
+
+  }
+}
