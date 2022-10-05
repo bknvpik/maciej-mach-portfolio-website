@@ -9,7 +9,17 @@ function main() {
     $header.classList.toggle('header-bg-on');
     $navMenu.classList.toggle('open-menu');
     $body.classList.toggle('no-scroll');
-  })
+  });
+
+  const $menuNavLinks = document.getElementsByClassName('nav-link');
+
+  for(let i = 0; i < $menuNavLinks.length; i++) {
+    $menuNavLinks[i].addEventListener('click', (event) => {
+      $header.classList.toggle('header-bg-on');
+      $navMenu.classList.toggle('open-menu');
+      $body.classList.toggle('no-scroll');
+    });
+  };
 }
 
 window.addEventListener('DOMContentLoaded', main);

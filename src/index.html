@@ -24,9 +24,9 @@
           </div>
         </div>
         <div class="nav-menu">
-          <a href="/#" class="nav-link">O mnie</a>
-          <a href="/#" class="nav-link">Oferta</a>
-          <a href="/#" class="nav-link">Kontakt</a>
+          <a href="#landing-page" class="nav-link">O mnie</a>
+          <a href="#reviews-section" class="nav-link">Opinie</a>
+          <a href="#contact-section" class="nav-link">Kontakt</a>
         </div>
       </nav>
     </header>
@@ -39,7 +39,7 @@
              jestem Maciek
           </h1>
           <p class="txt-body">i pomogę Ci zmienić sylwetkę</p>
-          <button class="action-button">Bezpłatna konsultacja</button>
+          <a href="#contact-section" class="action-button" id="free-consultation-button">Bezpłatna konsultacja</a>
         </div>
       </main>
       <section class="bg-light">
@@ -85,7 +85,7 @@
           </p>
         </article>
       </section>
-      <section class="bg-light">
+      <section class="bg-light" id="reviews-section">
         <article>
           <h2 class="txt-title">Opinie</h2>
           <p class="txt-body enter-line-break">Na swoim koncie mam wiele odmienionych sylwetek.
@@ -190,7 +190,7 @@
           3. Kontrola efektów
         </h4>
       </section>
-      <section class="bg-light">
+      <section class="bg-light" id="contact-section">
         <article>
           <h2 class="txt-title">Kontakt</h2>
           <p class="txt-body enter-line-break">Umów się ze mną na bezpłatną konsultację i razem ustalimy czego będziesz potrzebował żeby dojść do wymarzonej formy!
@@ -198,7 +198,7 @@
         </article>
         <form>
           <input type="text" name="name" id="input-name" placeholder="Twoje imię" />
-          <input type="text" name="email" id="input-email" placeholder="Adres e-mail" />
+          <input type="email" name="email" id="input-email" placeholder="Adres e-mail" />
           <textarea name="message" id="input-message" placeholder="Napisz w czym potrzebujesz pomocy..."></textarea>
           <button type="submit" class="action-button">Wyślij</button>
         </form>
