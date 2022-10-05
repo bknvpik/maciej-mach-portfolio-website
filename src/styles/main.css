@@ -26,6 +26,7 @@ p {
   margin: 0;
   overflow-x: hidden;
   color: white;
+  max-width: 100vw;
 }
 
 img {
@@ -62,16 +63,11 @@ header {
   position: fixed;
   width: 100%;
   padding: 1em 1em 1.5em 1em;
-}
-
-header {
-  width: 100%;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.75) 0%,
     rgba(0, 0, 0, 0) 100%
   );
-  transition: all .2s linear;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -96,8 +92,6 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
 }
 
 .open-menu {
@@ -110,7 +104,7 @@ nav {
 }
 
 .header-bg-on {
-  background: var(--color-bg-dark);
+  background-color: var(--color-bg-dark);
 }
 
 .nav-link {
@@ -292,4 +286,22 @@ textarea {
   display: flex;
   justify-content: center;
   gap: 0.625em;
+}
+
+.outline-txt {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 4em;
+  transform: translateY(-50%);
+  padding-bottom: 0.5em;
+  color: var(--color-bg-dark);
+  -webkit-text-stroke-width: 2px;
+  stroke-width: 1px;
+  -webkit-text-stroke-color: #FFFFFF;
+  stroke: #FFFFFF;
+  paint-order: stroke fill;
+  opacity: 0.1;
+  white-space: nowrap;
 }
