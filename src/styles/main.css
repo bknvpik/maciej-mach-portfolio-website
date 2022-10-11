@@ -25,7 +25,7 @@ h3,
 h4,
 p {
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   color: white;
   max-width: 100vw;
 }
@@ -73,6 +73,7 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 10;
+  transition: background .8s;
 }
 
 nav {
@@ -80,11 +81,9 @@ nav {
 }
 
 .nav-menu {
-  visibility: hidden;
   display: flex;
   position: absolute;
   left: 0;
-  opacity: 0;
   top: 5em;
   width: 100%;
   height: 100vh;
@@ -93,6 +92,9 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility .5s, opacity .5s;
 }
 
 .open-menu {
@@ -133,9 +135,12 @@ nav {
 }
 
 #main-container {
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-color: var(--color-bg-dark);
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
 }
 
 #landing-page {
@@ -143,6 +148,7 @@ nav {
   z-index: -2;
   display: flex;
   flex-direction: column;
+  scroll-snap-align: start;
 }
 
 #main-txt {
@@ -184,6 +190,11 @@ section {
   padding: 2em 1em;
 }
 
+.bg-dark, .bg-light, #reviews-section {
+  scroll-margin-top: 1.5em;
+  scroll-snap-align: start;
+}
+
 article {
   padding: 2em 0;
   display: flex;
@@ -222,14 +233,12 @@ article .action-button {
   display: flex;
 }
 
-.reviev-img {
+.review-img {
   flex: 1;
 }
 
 .review-img img {
   height: 100%;
-  width: 100%;
-  max-height: 100%;
   object-fit: cover;
 }
 
@@ -298,11 +307,12 @@ textarea {
   transform: translateY(-50%);
   padding-bottom: 0.5em;
   color: var(--color-bg-dark);
-  -webkit-text-stroke-width: 2px;
-  stroke-width: 1px;
-  -webkit-text-stroke-color: #FFFFFF;
-  stroke: #FFFFFF;
-  paint-order: stroke fill;
+  font-weight: bolder; 
+  text-shadow: 
+      -2px -2px 0 white,
+      -2px 2px 0 white,
+      2px -2px 0 white,
+      2px 2px 0 white;
   opacity: 0.1;
   white-space: nowrap;
 }
