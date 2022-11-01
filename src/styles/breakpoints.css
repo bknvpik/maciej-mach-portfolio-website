@@ -1,5 +1,206 @@
 @media(min-width: 80em) {
+  #nav-mobile {
+    display: none;
+  }
 
+  .content-container {
+    margin-inline: auto;
+    width: min(100%, 73.75em);
+  }
+
+  .line-break {
+    white-space: pre-line;
+  }
+
+  header {
+    background-color: var(--color-bg-dark);
+    padding: 0;
+  }
+
+  header .content-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5em 3.125em;
+  }
+
+  section {
+    padding: 2.5em 3.125em;
+    flex: 1;
+    display: flex;
+  }
+
+  .nav-menu {
+    all: unset;
+  }
+
+  .nav-menu__link {
+    font-size: 1em;
+    padding: 0 2em;
+  }
+
+  .nav-menu__link:hover {
+    color: var(--color-action);
+  }
+
+  #landing-page .content-container {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main-img {
+    width: 30em;
+    height: 34.375em;
+    margin: 2.5em 3.125em; 
+  }
+
+  .main-txt {
+    padding: 2.5em 3.125em; 
+    width: 50%;
+    display: flex;
+    align-self: center;
+  }
+
+  .main-txt__heading {
+    font-size: 4em;
+  }
+
+  .main-txt .txt {
+    font-size: 1.5em;
+  }
+
+  .action-button {
+    padding: 1.25em 1.875em ;
+    width: fit-content;
+    color: black;
+  }
+
+  .action-button--small {
+    font-size: 0.875em;
+    padding: 0.938em 1.563em  ;
+  }
+
+  #intro-section, 
+  #about-me-section, 
+  #reviews-section,
+  #work-with-me-section {
+    scroll-margin-top: 7.5em;
+    scroll-snap-align: start;
+  }
+
+  #about-me-section {
+    padding: 0;
+  }
+
+  #reviews-section .content-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #reviews-section .content-container article {
+    width: 100%;
+  }
+
+  #reviews-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25em;
+    padding: 0 3.125em;
+  }
+
+  #work-with-me-section .content-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #work-with-me-section .content-container article {
+    width: 50%;
+  }
+
+  #work-with-me-section .content-container article:nth-child(1) {
+    align-self: start;
+  }
+
+  #work-with-me-section .content-container article:nth-child(3) {
+    align-self: end;
+  }
+
+  #work-with-me-section .content-container article:nth-child(5) {
+    align-self: start;
+  }
+
+  .outline-txt {
+    display: none;
+  }
+
+  #work-with-me-section .content-container article:nth-child(1)::after {
+    content: '1. Poznajmy się';
+    position: absolute;
+    right: 0;
+    font-size: 8em;
+    color: var(--color-bg-dark);
+    font-weight: bolder; 
+    text-shadow: 
+        -2px -2px 0 white,
+        -2px 2px 0 white,
+        2px -2px 0 white,
+        2px 2px 0 white;
+    opacity: 0.1;
+    white-space: nowrap;
+  }
+
+
+  #work-with-me-section .content-container article:nth-child(3)::after {
+    content: '2. Trening oraz edukacja';
+    position: absolute;
+    left: 0;
+    font-size: 8em;
+    color: var(--color-bg-dark);
+    font-weight: bolder; 
+    text-shadow: 
+        -2px -2px 0 white,
+        -2px 2px 0 white,
+        2px -2px 0 white,
+        2px 2px 0 white;
+    opacity: 0.1;
+    white-space: nowrap;
+  }
+
+  #work-with-me-section .content-container article:nth-child(5)::after {
+    content: '3. Kontrola efektów';
+    position: absolute;
+    right: 0;
+    font-size: 8em;
+    color: var(--color-bg-dark);
+    font-weight: bolder; 
+    text-shadow: 
+        -2px -2px 0 white,
+        -2px 2px 0 white,
+        2px -2px 0 white,
+        2px 2px 0 white;
+    opacity: 0.1;
+    white-space: nowrap;
+  }
+
+  .review {
+    flex: 1;
+  }
+
+  .section-divider {
+    width: 100%;
+    display: flex;
+  }
+
+  article {
+    align-self: center;
+    padding: 3.75em 3.125em;
+  }
+
+  #big-img {
+    margin: 6.25em 3.125em;
+    align-self: center;
+    width: 30em;
+  }
 }
 
 @media(min-width: 120em) {

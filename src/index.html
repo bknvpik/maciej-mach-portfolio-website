@@ -11,215 +11,230 @@
     <link rel="stylesheet" href="styles/breakpoints.css" />
     <link rel="stylesheet" href="styles/interactive.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <script src="scripts/helpers/sendEmail.js" defer></script>
+    <script src="scripts/main.js" defer></script>
   </head>
   <body>
     <header>
-      <h1 class="txt-title">Maciej Mach</h1>
-      <nav>
-        <div id="nav-mobile">
-          <div id="menu-icon">
-            <div class="menu-icon-line"></div>
-            <div class="menu-icon-line"></div>
-            <div class="menu-icon-line"></div>
+        <h1 class="txt-title">Maciej Mach</h1>
+        <nav>
+          <div id="nav-mobile">
+            <div class="menu-icon">
+              <div class="menu-icon-line"></div>
+              <div class="menu-icon-line"></div>
+              <div class="menu-icon-line"></div>
+            </div>
           </div>
-        </div>
-        <div class="nav-menu">
-          <a href="#landing-page" class="nav-link">O mnie</a>
-          <a href="#reviews-section" class="nav-link">Opinie</a>
-          <a href="#contact-section" class="nav-link">Kontakt</a>
-        </div>
-      </nav>
+          <div class="nav-menu bg-dark">
+            <a href="#about-me-section" class="nav-menu__link">O mnie</a>
+            <a href="#reviews-section" class="nav-menu__link">Opinie</a>
+            <a href="#contact-section" class="nav-menu__link">Kontakt</a>
+          </div>
+        </nav>
     </header>
-    <div id="main-container">
+    <div id="main-container" class="bg-dark">
       <main id="landing-page">
-        <div id="main-img">
-        </div>
-        <div id="main-txt" class="enter-line-break">
-          <h1>Cześć,
-             jestem Maciek
-          </h1>
-          <p class="txt-body">i pomogę Ci zmienić sylwetkę</p>
-          <a href="#contact-section" class="action-button" id="free-consultation-button">Bezpłatna konsultacja</a>
+        <div class="content-container">
+          <div class="main-img">
+          </div>
+          <div class="main-txt line-break">
+            <h1 class="main-txt__heading">Cześć,
+               jestem Maciek
+            </h1>
+            <p class="txt">i pomogę Ci zmienić sylwetkę</p>
+            <a href="#contact-section" class="action-button" id="free-consultation-button">Bezpłatna konsultacja</a>
+          </div>
         </div>
       </main>
-      <section class="bg-light">
-        <article>
-          <h2 class="txt-title enter-line-break ">Wystarczy jeden
-            trening w tygodniu
-          </h2>
-          <p class="txt-body enter-line-break">Najnowsze badania pokazują że wykonując 30-60 
-            minut treningu siłowego raz w tygodniu obniżamy 
-            ryzyko przedwczesnej śmierci nawet o 10-20%.
-
-            Inwestując 1 godzinę w tygodniu (zaledwie 6% 
-            swojego tygodnia) zyskujesz dłuższe oraz lepsze życie.
-          </p>
-        </article>
+      <section id="intro-section" class="bg-light">
+        <div class="content-container">
+          <article>
+            <h2 class="txt-title">
+              Wystarczy jeden trening w tygodniu
+            </h2>
+            <p class="txt line-break">Najnowsze badania pokazują że wykonując 30-60 minut treningu siłowego raz w 
+              tygodniu obniżamy ryzyko przedwczesnej śmierci nawet o 10-20%.
+            </p>
+            <p class="txt line-break">Inwestując 1 godzinę w tygodniu (zaledwie 6% swojego tygodnia) zyskujesz dłuższe oraz 
+              lepsze życie.
+            </p>
+          </article>
+        </div>
       </section>
-      <div id="big-img"></div>
-      <section class="bg-dark">
-        <article>
-          <h2 class="txt-title">Dlaczego ja</h2>
-          <p class="txt-body enter-line-break">Od 4 lat pomagam ludziom zmienić swoją sylwetkę 
-            oraz poprawić jakość życia. 
-            Nauczę Cię jak bez większego wysiłku oraz ogromu 
-            wyrzeczeń osiągnąć wygląd oraz zdrowie o którym 
-            zawsze marzyłeś/aś
-            Nie znajdziesz u mnie rygorystycznych diet, głodówek 
-            oraz morderczych treningów które pozbawią cię energii. 
-            Trening i dieta mają być dla Ciebie - nie Ty dla nich!
-            
-            Chcesz dowiedzieć się wiecej o mnie i moich osiągnięciach?
-          </p>
-          <button class="action-button">Poznaj mnie bliżej</button>
-          <h2 class="txt-title enter-line-break">Co mogę Ci 
-            zaoferować?</h2>
-          <p class="txt-body enter-line-break">- Treningi personalne
-            - Prowadzenie żywieniowe
-            - Suplementacja 
-            - Prowadzenie online
-            
-            Do każdej osoby podchodzę indywidualnie - zarówno 
-            pod względem treningowym, dietetycznym jak i finansowym. 
-            Cena naszej współpracy jest zależna od zakresu realizowanych usług. 
-          </p>
-        </article>
-      </section>
+      <div class="section-divider">
+      <div class="content-container">
+      <span class="flex-1">
+        <div id="big-img"></div>
+      </span>
+        <section id="about-me-section" class="bg-dark">
+          <div class="content-container">
+            <article>
+              <h2 class="txt-title">Dlaczego ja</h2>
+              <p class="txt">
+                Od 4 lat pomagam ludziom zmienić swoją sylwetkę oraz poprawić jakość życia.
+                <br/>
+                Nauczę Cię jak bez większego wysiłku oraz ogromu wyrzeczeń osiągnąć wygląd oraz 
+                zdrowie o którym zawsze marzyłeś/aś
+                <br/>
+                Nie znajdziesz u mnie rygorystycznych diet, głodówek oraz morderczych treningów które 
+                pozbawią Cię energii.
+                <br/>
+                Trening i dieta mają być dla Ciebie - nie Ty dla nich!
+              </p>
+              <p class="txt"> 
+                Chcesz dowiedzieć się wiecej o mnie i moich osiągnięciach?
+              </p>
+              <button class="action-button action-button--small">Poznaj mnie bliżej</button>
+              <h2 class="txt-title">Co mogę Ci zaoferować</h2>
+              <p class="txt line-break">- Treningi personalne
+                - Prowadzenie żywieniowe
+                - Suplementacja 
+                - Prowadzenie online
+                
+                Do każdej osoby podchodzę indywidualnie - zarówno 
+                pod względem treningowym, dietetycznym jak i finansowym. 
+                Cena naszej współpracy jest zależna od zakresu realizowanych usług. 
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+      </div>
       <section class="bg-light" id="reviews-section">
-        <article>
-          <h2 class="txt-title">Opinie</h2>
-          <p class="txt-body enter-line-break">Na swoim koncie mam wiele odmienionych sylwetek.
-            Oto kilka z nich:
-          </p>
-        </article>
-        <div id="reviews-container">
-          <div class="review">
-            <div class="review-img-container">
-              <div class="review-img">
-                <img src="./assets/images/fat1.jpeg" alt="Przed współpracą z Maciejem">
+        <div class="content-container">
+          <article>
+            <h2 class="txt-title">Opinie</h2>
+            <p class="txt line-break">Na swoim koncie mam wiele odmienionych sylwetek.
+              Oto kilka z nich:
+            </p>
+          </article>
+          <div id="reviews-container">
+            <div class="review">
+              <div class="review-img-container">
+                <div class="review-img">
+                  <img src="./assets/images/fat1.jpeg" alt="Przed współpracą z Maciejem">
+                </div>
+                <div class="review-img">
+                  <img src="./assets/images/fit1.jpeg" alt="Po współpracy z Maciejem">
+                </div>
               </div>
-              <div class="review-img">
-                <img src="./assets/images/fit1.jpeg" alt="Po współpracy z Maciejem">
-              </div>
-            </div>
-            <div class="review-txt">
-              <p class="reviewer-details">Andrzej, 24 lat</p>
-              <p class="txt-body enter-line-break">Pół roku treningu
-                + 10cm w łapie</p>
-              <p class="txt-body enter-line-break">Integer leo nulla, luctus non placerat eu, tristique eget nisi. 
-                Nam placerat eleifend ex. Ut scelerisque nulla augue, eu tempus ante rutrum non. 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Sed sodales ipsum sem, finibus aliquam diam laoreet eu. Duis quis est dolor. 
-                Mauris tristique libero nec metus fringilla, quis vehicula quam consequat. 
-                Etiam ultricies semper augue at vehicula. </p>
-            </div>
-          </div>
-          <div class="review">
-            <div class="review-img-container">
-              <div class="review-img">
-                <img src="./assets/images/fat2.jpeg" alt="Przed współpracą z Maciejem">
-              </div>
-              <div class="review-img">
-                <img src="./assets/images/fit2.jpeg" alt="Po współpracy z Maciejem">
+              <div class="review-txt">
+                <p class="reviewer-details">Andrzej, 24 lat</p>
+                <p class="txt line-break">Pół roku treningu
+                  + 10cm w łapie</p>
+                <p class="txt line-break">Integer leo nulla, luctus non placerat eu, tristique eget nisi. 
+                  Nam placerat eleifend ex. Ut scelerisque nulla augue, eu tempus ante rutrum non. 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Sed sodales ipsum sem, finibus aliquam diam laoreet eu. Duis quis est dolor. 
+                  Mauris tristique libero nec metus fringilla, quis vehicula quam consequat. 
+                  Etiam ultricies semper augue at vehicula. </p>
               </div>
             </div>
-            <div class="review-txt">
-              <p class="reviewer-details">Krzysiek, 28 lat</p>
-              <p class="txt-body enter-line-break">Dwa lata ciągłego treningu
-                - 60kg</p>
-              <p class="txt-body enter-line-break">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Ut at lorem a lorem finibus volutpat vitae ut justo. Aenean lorem purus, elementum at sapien id, ultrices placerat nulla. 
-                Curabitur sodales, mi ac rutrum finibus, odio dolor volutpat neque, ut tempor eros orci eget odio. 
-                Duis eu mauris libero.</p>
-            </div>
-          </div>
-          <div class="review">
-            <div class="review-img-container">
-              <div class="review-img">
-                <img src="./assets/images/fat3.jpeg" alt="Przed współpracą z Maciejem">
+            <div class="review">
+              <div class="review-img-container">
+                <div class="review-img">
+                  <img src="./assets/images/fat2.jpeg" alt="Przed współpracą z Maciejem">
+                </div>
+                <div class="review-img">
+                  <img src="./assets/images/fit2.jpeg" alt="Po współpracy z Maciejem">
+                </div>
               </div>
-              <div class="review-img">
-                <img src="./assets/images/fit3.jpeg" alt="Po współpracy z Maciejem">
+              <div class="review-txt">
+                <p class="reviewer-details">Krzysiek, 28 lat</p>
+                <p class="txt line-break">Dwa lata ciągłego treningu
+                  - 60kg</p>
+                <p class="txt line-break">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Ut at lorem a lorem finibus volutpat vitae ut justo. Aenean lorem purus, elementum at sapien id, ultrices placerat nulla. 
+                  Curabitur sodales, mi ac rutrum finibus, odio dolor volutpat neque, ut tempor eros orci eget odio. 
+                  Duis eu mauris libero.</p>
               </div>
             </div>
-            <div class="review-txt">
-              <p class="reviewer-details">Aneta, 19 lat</p>
-              <p class="txt-body enter-line-break">Dwa lata ciągłego treningu
-                - 40kg</p>
-              <p class="txt-body enter-line-break">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Ut at lorem a lorem finibus volutpat vitae ut justo. Aenean lorem purus, elementum at sapien id, ultrices placerat nulla. 
-                Curabitur sodales, mi ac rutrum finibus, odio dolor volutpat neque, ut tempor eros orci eget odio. Duis eu mauris libero. 
-                Phasellus interdum fermentum elit ac tempor. Morbi sed lacinia quam, nec maximus magna. 
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-                Nullam aliquet risus at neque sollicitudin venenatis. </p>
+            <div class="review">
+              <div class="review-img-container">
+                <div class="review-img">
+                  <img src="./assets/images/fat3.jpeg" alt="Przed współpracą z Maciejem">
+                </div>
+                <div class="review-img">
+                  <img src="./assets/images/fit3.jpeg" alt="Po współpracy z Maciejem">
+                </div>
+              </div>
+              <div class="review-txt">
+                <p class="reviewer-details">Aneta, 19 lat</p>
+                <p class="txt line-break">Dwa lata ciągłego treningu
+                  - 40kg</p>
+                <p class="txt line-break">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Ut at lorem a lorem finibus volutpat vitae ut justo. Aenean lorem purus, elementum at sapien id, ultrices placerat nulla. 
+                  Curabitur sodales, mi ac rutrum finibus, odio dolor volutpat neque, ut tempor eros orci eget odio. Duis eu mauris libero. 
+                  Phasellus interdum fermentum elit ac tempor. Morbi sed lacinia quam, nec maximus magna. 
+                  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+                  Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                  Nullam aliquet risus at neque sollicitudin venenatis. </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="bg-dark">
-        <article>
-          <h2 class="txt-title">Jak wygląda praca ze mną?</h2>
-          <h3 class="heading-small">1. Poznajmy się  👋🏻</h3>
-          <p class="txt-body enter-line-break">Podczas naszego pierwszego spotkania chcę się 
-            dowiedzieć o Tobie jak najwięcej tak aby przygotować 
-            dla nas odpowiedni plan działania.
-          </p>
-        </article>
-        <h4 class="outline-txt">
-          1. Poznajmy się
-        </h4>
-        <article>
-          <h3 class="heading-small">2. Trening oraz edukacja  💪🏻</h3>
-          <p class="txt-body enter-line-break">Podczas kolejnych wizyt będziemy wprowadzać 
-            kolejne elementy treningu oraz zdrowe nawyki żywieniowe. 
-            Wszystko będzie odbywać się stopniowo tak aby było dla Ciebie jak najłatwiejsze w realizacji a 
-            zarazem najbardziej optymalne pod względem przemiany Twojego wyglądu.
-          </p>
-        </article>
-        <h4 class="outline-txt">
-          2. Trening oraz edukacja
-        </h4>
-        <article>
-          <h3 class="heading-small">3. Kontrola efektów  📋</h3>
-          <p class="txt-body enter-line-break">Cykliczne pomiary oraz obserwacja ciała pozwoli nam 
-            kontrolować przemianę Twojej sylwetki oraz wprowadzać odpowiednie zmiany.
-          </p>
-        </article>
-        <h4 class="outline-txt">
-          3. Kontrola efektów
-        </h4>
+      <section id="work-with-me-section" class="bg-dark">
+        <div class="content-container">
+          <article>
+            <h2 class="txt-title">Jak wygląda praca ze mną?</h2>
+            <h3 class="txt-point">1. Poznajmy się  👋🏻</h3>
+            <p class="txt line-break">Podczas naszego pierwszego spotkania chcę się 
+              dowiedzieć o Tobie jak najwięcej tak aby przygotować 
+              dla nas odpowiedni plan działania.
+            </p>
+          </article>
+          <h4 class="outline-txt">
+            1. Poznajmy się
+          </h4>
+          <article>
+            <h3 class="txt-point">2. Trening oraz edukacja  💪🏻</h3>
+            <p class="txt line-break">Podczas kolejnych wizyt będziemy wprowadzać 
+              kolejne elementy treningu oraz zdrowe nawyki żywieniowe. 
+              Wszystko będzie odbywać się stopniowo tak aby było dla Ciebie 
+              jak najłatwiejsze w realizacji a zarazem najbardziej optymalne 
+              pod względem przemiany Twojego wyglądu.
+            </p>
+          </article>
+          <h4 class="outline-txt">
+            2. Trening oraz edukacja
+          </h4>
+          <article>
+            <h3 class="txt-point">3. Kontrola efektów  📋</h3>
+            <p class="txt line-break">Cykliczne pomiary oraz obserwacja ciała pozwoli nam 
+              kontrolować przemianę Twojej sylwetki oraz wprowadzać odpowiednie zmiany.
+            </p>
+          </article>
+          <h4 class="outline-txt">
+            3. Kontrola efektów
+          </h4>
+          </div>  
       </section>
       <section class="bg-light" id="contact-section">
-        <article>
-          <h2 class="txt-title">Kontakt</h2>
-          <p class="txt-body enter-line-break">Umów się ze mną na bezpłatną konsultację i razem ustalimy czego będziesz potrzebował żeby dojść do wymarzonej formy!
-          </p>
-        </article>
-        <form>
-          <input type="text" name="name" id="input-name" placeholder="Twoje imię" />
-          <input type="email" name="email" id="input-email" placeholder="Adres e-mail" />
-          <textarea name="message" id="input-message" placeholder="Napisz w czym potrzebujesz pomocy..."></textarea>
-          <button type="submit" class="action-button">Wyślij</button>
-        </form>
-        <div id="social-media">
-          <h3>Sprawdź mój instagram</h3>
-          <span>
-            <img src="./assets/svg/instagram.svg" alt="Instagram icon"/>
-            <p>@maciek.mach</p>
-          </span>
+        <div class="content-container">
+          <article>
+            <h2 class="txt-title">Kontakt</h2>
+            <p class="txt line-break">Umów się ze mną na bezpłatną konsultację i razem ustalimy czego będziesz potrzebował żeby dojść do wymarzonej formy!
+            </p>
+          </article>
+          <form>
+            <input type="text" name="name" id="input-name" placeholder="Twoje imię" />
+            <input type="email" name="email" id="input-email" placeholder="Adres e-mail" />
+            <textarea name="message" id="input-message" placeholder="Napisz w czym potrzebujesz pomocy..."></textarea>
+            <button type="submit" class="action-button">Wyślij</button>
+          </form>
+          <div id="social-media">
+            <h3>Sprawdź mój instagram</h3>
+            <span>
+              <img src="./assets/svg/instagram.svg" alt="Instagram icon"/>
+              <p>@maciek.mach</p>
+            </span>
+          </div>
         </div>
       </section>
       <footer class="bg-dark">
         <p>Ⓒ2022 Maciej Mach</p>
-      </footer>  
-      <!-- <div class="hide-overflow">
-        <div id="elipse-1" class="elipses"></div>
-        <div id="elipse-2" class="elipses"></div>
-        <div id="elipse-3" class="elipses"></div>
-        <div id="elipse-4" class="elipses"></div>
-      </div> -->
+      </footer>
     </div>
   </body>
 </html>
-<script src="scripts/main.js"></script>
