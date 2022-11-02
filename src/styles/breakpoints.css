@@ -5,7 +5,7 @@
 
   .content-container {
     margin-inline: auto;
-    width: min(100%, 73.75em);
+    width: min(100%, 73.75rem);
   }
 
   .line-break {
@@ -18,15 +18,12 @@
   }
 
   header .content-container {
-    display: flex;
     justify-content: space-between;
     padding: 2.5em 3.125em;
   }
 
   section {
     padding: 2.5em 3.125em;
-    flex: 1;
-    display: flex;
   }
 
   .nav-menu {
@@ -51,11 +48,9 @@
   .main-img {
     width: 30em;
     height: 34.375em;
-    margin: 2.5em 3.125em; 
   }
 
   .main-txt {
-    padding: 2.5em 3.125em; 
     width: 50%;
     display: flex;
     align-self: center;
@@ -80,6 +75,20 @@
     padding: 0.938em 1.563em  ;
   }
 
+  #intro-section {
+    width: 100%;
+    padding: 0;
+  }
+
+  #about-me-section .content-container {
+    display: flex;
+    gap: 7.5em;
+  }
+
+  #about-me-section article {
+    flex: 1;
+  }
+
   #intro-section, 
   #about-me-section, 
   #reviews-section,
@@ -92,40 +101,57 @@
     padding: 0;
   }
 
+  #reviews-section {
+    padding: 0;
+  }
+
   #reviews-section .content-container {
     display: flex;
     flex-direction: column;
+    padding-bottom: 7.5em;
   }
 
   #reviews-section .content-container article {
     width: 100%;
+    padding: 7.5em 0 3.75em 0;
   }
 
   #reviews-container {
     display: flex;
     flex-direction: row;
     gap: 1.25em;
-    padding: 0 3.125em;
+    padding: 0;
+  }
+
+  #work-with-me-section {
+    padding: 0;
+  }
+
+  .txt-title {
+    padding-bottom: 1.875em;
   }
 
   #work-with-me-section .content-container {
+    padding: 7.5em 0;
     display: flex;
     flex-direction: column;
   }
 
   #work-with-me-section .content-container article {
     width: 50%;
+    padding: 0 0 7.5em 0;
   }
 
-  #work-with-me-section .content-container article:nth-child(1) {
+  #work-with-me-section .content-container article:nth-child(2) {
     align-self: start;
   }
 
-  #work-with-me-section .content-container article:nth-child(3) {
+  #work-with-me-section .content-container article:nth-child(4) {
     align-self: end;
+    width: auto;
   }
 
-  #work-with-me-section .content-container article:nth-child(5) {
+  #work-with-me-section .content-container article:nth-child(6) {
     align-self: start;
   }
 
@@ -133,7 +159,7 @@
     display: none;
   }
 
-  #work-with-me-section .content-container article:nth-child(1)::after {
+  #work-with-me-section .content-container article:nth-child(2)::after {
     content: '1. Poznajmy się';
     position: absolute;
     right: 0;
@@ -150,7 +176,7 @@
   }
 
 
-  #work-with-me-section .content-container article:nth-child(3)::after {
+  #work-with-me-section .content-container article:nth-child(4)::after {
     content: '2. Trening oraz edukacja';
     position: absolute;
     left: 0;
@@ -166,7 +192,7 @@
     white-space: nowrap;
   }
 
-  #work-with-me-section .content-container article:nth-child(5)::after {
+  #work-with-me-section .content-container article:nth-child(6)::after {
     content: '3. Kontrola efektów';
     position: absolute;
     right: 0;
@@ -193,13 +219,106 @@
 
   article {
     align-self: center;
-    padding: 3.75em 3.125em;
+    padding: 6.25em 0;
   }
 
   #big-img {
-    margin: 6.25em 3.125em;
-    align-self: center;
     width: 30em;
+    height: 34.375em;
+    margin: 6.25em 0;
+    align-self: center;
+  }
+
+  .txt-title {
+    padding-bottom: 1.875rem;
+  }
+
+  #contact-section {
+    padding: 0;
+  }
+
+  #contact-section .content-container {
+    display: flex;
+    flex-direction: row;
+    padding: 6.25em 0;
+
+  }
+
+  #contact-section .content-container article {
+    padding: 0;
+  }
+
+  #contact-section .content-container .txt {
+    padding: 0;
+  }
+
+  #contact-section .content-container span {
+    width: 50%;
+  }
+
+  #contact-section .content-container form {
+    width: 50%;
+  }
+
+  #social-media {
+    align-items: flex-start;
+  }
+
+  #social-media h3 {
+    margin: 0;
+  }
+
+  #social-media {
+    margin-top: 3.125em;
+  }
+
+  #social-media span {
+    justify-content: flex-start;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1.25em;
+    align-self: flex-end;
+  }
+
+  form input[type="text"] {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  form input[type="email"] {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  form .action-button {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+  }
+
+  form textarea {
+    width: 100%;
+    height: 100%;
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin: 0;
+  }
+
+  footer {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer .content-container {
+    padding: 1.25em 0;
   }
 }
 
