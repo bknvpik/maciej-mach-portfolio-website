@@ -4,7 +4,7 @@ function main() {
   const $navToggler = document.getElementsByClassName('menu-icon')[0];
   const $header = document.getElementsByTagName('header')[0];
   const $navMenu = document.getElementsByClassName('nav-menu')[0];
-  const $navIconLines = document.getElementsByClassName('menu-icon-line');
+  const $navIconLines = document.getElementsByClassName('menu-icon__line');
 
   const $mainContainer = document.getElementById('main-container');
   const $landingPage = document.getElementById('landing-page');
@@ -16,7 +16,7 @@ function main() {
       $header.classList.toggle('bg-dark');
     $navMenu.classList.toggle('nav-menu--open');
     $body.classList.toggle('no-scroll');
-    $navIconLines[1].classList.toggle('hide');
+    $navIconLines[1].classList.toggle('move-and-hide');
     $navIconLines[0].classList.toggle('rotate45-right');
     $navIconLines[2].classList.toggle('rotate45-left');
   });

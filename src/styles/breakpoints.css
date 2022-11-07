@@ -13,13 +13,10 @@
   }
 
   header {
+    left: 0;
+    right: 0;
+    top: 0;
     background-color: var(--color-bg-dark);
-    padding: 0;
-  }
-
-  header .content-container {
-    justify-content: space-between;
-    padding: 2.5em 3.125em;
   }
 
   section {
@@ -45,22 +42,22 @@
     justify-content: space-between;
   }
 
-  .main-img {
+  .landing-page__img {
     width: 30em;
     height: 34.375em;
   }
 
-  .main-txt {
+  .landing-page__txt{
     width: 50%;
     display: flex;
     align-self: center;
   }
 
-  .main-txt__heading {
+  .landing-page__txt--heading {
     font-size: 4em;
   }
 
-  .main-txt .txt {
+  .landing-page__txt.txt {
     font-size: 1.5em;
   }
 
@@ -222,7 +219,7 @@
     padding: 6.25em 0;
   }
 
-  #big-img {
+  #img {
     width: 30em;
     height: 34.375em;
     margin: 6.25em 0;

@@ -15,14 +15,15 @@
     <script src="scripts/main.js" defer></script>
   </head>
   <body>
-    <header>
+    <header class="no-select">
+      <div class="content-container content-container--nav">
         <h1 class="txt-title">Maciej Mach</h1>
         <nav>
           <div id="nav-mobile">
             <div class="menu-icon">
-              <div class="menu-icon-line"></div>
-              <div class="menu-icon-line"></div>
-              <div class="menu-icon-line"></div>
+              <div class="menu-icon__line"></div>
+              <div class="menu-icon__line"></div>
+              <div class="menu-icon__line"></div>
             </div>
           </div>
           <div class="nav-menu bg-dark">
@@ -31,22 +32,23 @@
             <a href="#contact-section" class="nav-menu__link">Kontakt</a>
           </div>
         </nav>
+      </div>
     </header>
     <div id="main-container" class="bg-dark">
-      <main id="landing-page">
-        <div class="content-container">
-          <div class="main-img">
+      <main id="landing-page" class="scroll-snap-start">
+        <div class="content-container content-container--landing-page">
+          <div class="landing-page__img">
           </div>
-          <div class="main-txt line-break">
-            <h1 class="main-txt__heading">Cześć,
+          <div class="landing-page__txt line-break">
+            <h1 class="landing-page__txt--heading">Cześć,
                jestem Maciek
             </h1>
             <p class="txt">i pomogę Ci zmienić sylwetkę</p>
-            <a href="#contact-section" class="action-button" id="free-consultation-button">Bezpłatna konsultacja</a>
+            <a href="#contact-section" class="action-button">Bezpłatna konsultacja</a>
           </div>
         </div>
       </main>
-      <section id="intro-section" class="bg-light">
+      <section id="intro-section" class="bg-light scroll-snap-start">
         <div class="content-container">
           <article>
             <h2 class="txt-title">
@@ -61,10 +63,10 @@
           </article>
         </div>
       </section>
-      <section id="about-me-section" class="bg-dark">
+      <section id="about-me-section" class="bg-dark scroll-snap-start">
         <div class="content-container">
           <span cass="flex-1">
-            <div id="big-img"></div>
+            <div id="img"></div>
           </span>
           <article>
             <h2 class="txt-title">Dlaczego ja</h2>
@@ -96,7 +98,7 @@
           </article>
         </div>
       </section>
-      <section class="bg-light" id="reviews-section">
+      <section id="reviews-section" class="bg-light scroll-snap-start">
         <div class="content-container">
           <article>
             <h2 class="txt-title">Opinie</h2>
@@ -106,16 +108,16 @@
           </article>
           <div id="reviews-container">
             <div class="review">
-              <div class="review-img-container">
-                <div class="review-img">
+              <div class="review__img">
+                <div class="review__img__part">
                   <img src="./assets/images/fat1.jpeg" alt="Przed współpracą z Maciejem">
                 </div>
-                <div class="review-img">
+                <div class="review__img__part">
                   <img src="./assets/images/fit1.jpeg" alt="Po współpracy z Maciejem">
                 </div>
               </div>
               <div class="review-txt">
-                <p class="reviewer-details">Andrzej, 24 lat</p>
+                <p class="reviewer-txt__details">Andrzej, 24 lat</p>
                 <p class="txt line-break">Pół roku treningu
                   + 10cm w łapie</p>
                 <p class="txt line-break">Integer leo nulla, luctus non placerat eu, tristique eget nisi. 
@@ -127,16 +129,16 @@
               </div>
             </div>
             <div class="review">
-              <div class="review-img-container">
-                <div class="review-img">
+              <div class="review__img">
+                <div class="review__img__part">
                   <img src="./assets/images/fat2.jpeg" alt="Przed współpracą z Maciejem">
                 </div>
-                <div class="review-img">
+                <div class="review__img__part">
                   <img src="./assets/images/fit2.jpeg" alt="Po współpracy z Maciejem">
                 </div>
               </div>
               <div class="review-txt">
-                <p class="reviewer-details">Krzysiek, 28 lat</p>
+                <p class="reviewer-txt__details">Krzysiek, 28 lat</p>
                 <p class="txt line-break">Dwa lata ciągłego treningu
                   - 60kg</p>
                 <p class="txt line-break">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -146,16 +148,16 @@
               </div>
             </div>
             <div class="review">
-              <div class="review-img-container">
-                <div class="review-img">
+              <div class="review__img">
+                <div class="review__img__part">
                   <img src="./assets/images/fat3.jpeg" alt="Przed współpracą z Maciejem">
                 </div>
-                <div class="review-img">
+                <div class="review__img__part">
                   <img src="./assets/images/fit3.jpeg" alt="Po współpracy z Maciejem">
                 </div>
               </div>
               <div class="review-txt">
-                <p class="reviewer-details">Aneta, 19 lat</p>
+                <p class="reviewer-txt__details">Aneta, 19 lat</p>
                 <p class="txt line-break">Dwa lata ciągłego treningu
                   - 40kg</p>
                 <p class="txt line-break">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -170,7 +172,7 @@
           </div>
         </div>
       </section>
-      <section id="work-with-me-section" class="bg-dark">
+      <section id="work-with-me-section" class="bg-dark scroll-snap-start">
         <div class="content-container">
           <h2 class="txt-title">Jak wygląda praca ze mną?</h2>
           <article>
@@ -206,7 +208,7 @@
           </h4>
           </div>  
       </section>
-      <section class="bg-light" id="contact-section">
+      <section class="bg-light scroll-snap-start" id="contact-section">
         <div class="content-container">
           <span>
           <article>
