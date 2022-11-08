@@ -10,18 +10,23 @@ function main() {
   const $landingPage = document.getElementById('landing-page');
 
   const $menuNavLinks = document.getElementsByClassName('nav-menu__link');
+  
+  const mobileMediaQuery = window.matchMedia('(max-width: 80em)');
 
-  $navToggler.addEventListener('click', (event) => {
-    if($mainContainer.scrollTop < $landingPage.getBoundingClientRect().bottom)
-      $header.classList.toggle('bg-dark');
+  const toggleMobileMenu = () => {
     $navMenu.classList.toggle('nav-menu--open');
     $body.classList.toggle('no-scroll');
     $navIconLines[1].classList.toggle('move-and-hide');
     $navIconLines[0].classList.toggle('rotate45-right');
     $navIconLines[2].classList.toggle('rotate45-left');
+  }
+
+  $navToggler.addEventListener('click', (event) => {
+    if($mainContainer.scrollTop < $landingPage.getBoundingClientRect().bottom)
+      $header.classList.toggle('bg-dark');
+      toggleMobileMenu();
   });
 
-  const mobileMediaQuery = window.matchMedia('(max-width: 80em)');
 
   if(mobileMediaQuery.matches)
     $mainContainer.onscroll = () => {
@@ -33,8 +38,7 @@ function main() {
   for(let i = 0; i < $menuNavLinks.length; i++) {
     $menuNavLinks[i].addEventListener('click', (event) => {
       $header.classList.toggle('bg-dark');
-      $navMenu.classList.toggle('nav-menu--open');
-      $body.classList.toggle('no-scroll');
+      toggleMobileMenu();
     });
   };
 }

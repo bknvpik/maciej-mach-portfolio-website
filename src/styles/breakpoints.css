@@ -3,62 +3,60 @@
     display: none;
   }
 
-  .content-container {
-    margin-inline: auto;
-    width: min(100%, 73.75rem);
-  }
-
   .line-break {
     white-space: pre-line;
   }
 
-  header {
-    left: 0;
-    right: 0;
-    top: 0;
-    background-color: var(--color-bg-dark);
+  .scroll-snap-start {
+    scroll-margin-top: 7.5em;
   }
 
-  section {
-    padding: 2.5em 3.125em;
+  header {
+    padding: 2.5em 0;
+    background-color: var(--color-bg-dark);
   }
 
   .nav-menu {
     all: unset;
+    display: flex;
+    gap: 20px;
   }
 
   .nav-menu__link {
     font-size: 1em;
-    padding: 0 2em;
+    padding: 0;
+  }
+  
+  .content-container {
+    padding-inline: 0;
+    margin-inline: auto;
+    width: min(100%, 73.75rem);
   }
 
-  .nav-menu__link:hover {
-    color: var(--color-action);
-  }
-
-  #landing-page .content-container {
+  .content-container--landing-page {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
   }
 
-  .landing-page__img {
-    width: 30em;
-    height: 34.375em;
+  .landing-page__txt {
+    padding: 0;
+    position: relative;
   }
-
-  .landing-page__txt{
-    width: 50%;
-    display: flex;
-    align-self: center;
-  }
-
+  
   .landing-page__txt--heading {
     font-size: 4em;
   }
 
-  .landing-page__txt.txt {
-    font-size: 1.5em;
+  .landing-page__txt--heading::after {
+    content: url(../assets/svg/accent_vector.svg);
+    position: absolute;
+    top: 40%;
+    left: 20%;
+  }
+
+  .landing-page__txt .txt {
+    font-size: 1.5rem;
   }
 
   .action-button {
@@ -66,157 +64,75 @@
     width: fit-content;
     color: black;
   }
-
-  .action-button--small {
-    font-size: 0.875em;
-    padding: 0.938em 1.563em  ;
+  
+  .landing-page__img,
+  .about-me-section__img {
+    flex: none;
+    margin-bottom: 0;
+    width: 30em;
+    height: 34.375em;
   }
 
-  #intro-section {
-    width: 100%;
-    padding: 0;
+  .content-container--intro-section {
+    padding: 6.25em 0;
   }
 
-  #about-me-section .content-container {
+  .content-container--about-me-section {
+    flex-direction: row;
+    padding: 6.25em 0;
     display: flex;
     gap: 7.5em;
+    align-items: center;
   }
 
-  #about-me-section article {
-    flex: 1;
-  }
-
-  #intro-section, 
-  #about-me-section, 
-  #reviews-section,
-  #work-with-me-section {
-    scroll-margin-top: 7.5em;
-    scroll-snap-align: start;
-  }
-
-  #about-me-section {
+  .article--about-me-section {
     padding: 0;
   }
 
-  #reviews-section {
-    padding: 0;
+  .action-button--about-me-section {
+    font-size: 0.875em;
+    padding: 0.938em 1.563em;
   }
 
-  #reviews-section .content-container {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 7.5em;
+  .article--reviews-section {
+    padding: 6.25em 0 3.125em 0;
   }
 
-  #reviews-section .content-container article {
-    width: 100%;
-    padding: 7.5em 0 3.75em 0;
-  }
-
-  #reviews-container {
-    display: flex;
+  .reviews-section__container {
     flex-direction: row;
     gap: 1.25em;
-    padding: 0;
+    padding-bottom: 6.25em;
   }
 
   #work-with-me-section {
     padding: 0;
   }
 
-  .txt-title {
-    padding-bottom: 1.875em;
+  .content-container--work-with-me-section {
+    gap: 1.875em;
+    padding: 6.25em 0;
   }
 
-  #work-with-me-section .content-container {
-    padding: 7.5em 0;
-    display: flex;
-    flex-direction: column;
+  .content-container--work-with-me-section article:nth-of-type(2) {
+    text-align: right;
   }
 
-  #work-with-me-section .content-container article {
-    width: 50%;
-    padding: 0 0 7.5em 0;
-  }
-
-  #work-with-me-section .content-container article:nth-child(2) {
-    align-self: start;
-  }
-
-  #work-with-me-section .content-container article:nth-child(4) {
-    align-self: end;
-    width: auto;
-  }
-
-  #work-with-me-section .content-container article:nth-child(6) {
-    align-self: start;
+  .article--work-with-me-section {
+    padding: 0 0 6.25em 0;
   }
 
   .outline-txt {
-    display: none;
-  }
-
-  #work-with-me-section .content-container article:nth-child(2)::after {
-    content: '1. Poznajmy się';
-    position: absolute;
-    right: 0;
+    width: calc(50vw + 590px);
+    text-align: right;
+    top: 0;
     font-size: 8em;
-    color: var(--color-bg-dark);
-    font-weight: bolder; 
-    text-shadow: 
-        -2px -2px 0 white,
-        -2px 2px 0 white,
-        2px -2px 0 white,
-        2px 2px 0 white;
-    opacity: 0.1;
-    white-space: nowrap;
+    padding: 0;
   }
 
-
-  #work-with-me-section .content-container article:nth-child(4)::after {
-    content: '2. Trening oraz edukacja';
-    position: absolute;
-    left: 0;
-    font-size: 8em;
-    color: var(--color-bg-dark);
-    font-weight: bolder; 
-    text-shadow: 
-        -2px -2px 0 white,
-        -2px 2px 0 white,
-        2px -2px 0 white,
-        2px 2px 0 white;
-    opacity: 0.1;
-    white-space: nowrap;
-  }
-
-  #work-with-me-section .content-container article:nth-child(6)::after {
-    content: '3. Kontrola efektów';
-    position: absolute;
-    right: 0;
-    font-size: 8em;
-    color: var(--color-bg-dark);
-    font-weight: bolder; 
-    text-shadow: 
-        -2px -2px 0 white,
-        -2px 2px 0 white,
-        2px -2px 0 white,
-        2px 2px 0 white;
-    opacity: 0.1;
-    white-space: nowrap;
-  }
-
-  .review {
-    flex: 1;
-  }
-
-  .section-divider {
-    width: 100%;
-    display: flex;
-  }
-
-  article {
-    align-self: center;
-    padding: 6.25em 0;
+  .content-container--work-with-me-section article:nth-of-type(2) .outline-txt
+  {
+    text-align: left;
+    left: calc(590px - 50vw);
   }
 
   #img {
@@ -226,96 +142,81 @@
     align-self: center;
   }
 
-  .txt-title {
-    padding-bottom: 1.875rem;
-  }
-
-  #contact-section {
-    padding: 0;
-  }
-
-  #contact-section .content-container {
-    display: flex;
-    flex-direction: row;
+  .content-container--contact-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     padding: 6.25em 0;
-
   }
 
-  #contact-section .content-container article {
+  .article--contact-section {
     padding: 0;
+    grid-column: 1;
+    grid-row: 1;
   }
-
-  #contact-section .content-container .txt {
-    padding: 0;
-  }
-
-  #contact-section .content-container span {
-    width: 50%;
-  }
-
-  #contact-section .content-container form {
-    width: 50%;
-  }
-
+  
+  
   #social-media {
+    grid-column: 1;
+    grid-row: 2;
     align-items: flex-start;
   }
-
-  #social-media h3 {
-    margin: 0;
-  }
-
-  #social-media {
-    margin-top: 3.125em;
-  }
-
+  
   #social-media span {
     justify-content: flex-start;
   }
 
   form {
+    grid-column: 2;
+    grid-row: 1 / span 2;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 1.25em;
-    align-self: flex-end;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 
-  form input[type="text"] {
+  form input, textarea {
+    width: 100%;
+    font-size: 0.875em;
+    padding: 0.625em;
+    margin-bottom: 1em;
+    border: 1px solid var(--color-bg-review);
+    background-color: var(--color-bg-dark);
+    color: var(--color-txt-placeholder);
+  }
+  
+  textarea {
+    height: 100%;
+  }
+
+  #input-name {
     grid-column: 1;
     grid-row: 1;
-    margin: 0;
   }
 
-  form input[type="email"] {
+  #input-email {
     grid-column: 1;
     grid-row: 2;
-    margin: 0;
   }
 
-  form .action-button {
+  button[type="submit"] {
     grid-column: 1;
     grid-row: 3;
-    width: 100%;
   }
 
-  form textarea {
-    width: 100%;
-    height: 100%;
-    grid-column: 2;
-    grid-row-start: 1;
-    grid-row-end: 4;
-    margin: 0;
+  #input-message {
+    grid-row: 1 / span 3;
   }
 
   footer {
-    padding: 0;
+    padding: 1em;
     display: flex;
     justify-content: space-between;
   }
 
-  footer .content-container {
-    padding: 1.25em 0;
+  .content-container--footer {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
