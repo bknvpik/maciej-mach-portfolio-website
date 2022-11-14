@@ -85,6 +85,10 @@
     align-items: center;
   }
 
+  article {
+    gap: 1.875em;
+  }
+
   .article--about-me-section {
     padding: 0;
   }
@@ -109,7 +113,7 @@
   }
 
   .content-container--work-with-me-section {
-    gap: 1.875em;
+    gap: 1.25em;
     padding: 6.25em 0;
   }
 
@@ -135,13 +139,6 @@
     left: calc(590px - 50vw);
   }
 
-  #img {
-    width: 30em;
-    height: 34.375em;
-    margin: 6.25em 0;
-    align-self: center;
-  }
-
   .content-container--contact-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -154,13 +151,16 @@
     grid-row: 1;
   }
   
-  
   #social-media {
     grid-column: 1;
     grid-row: 2;
     align-items: flex-start;
   }
   
+  #social-media h3 {
+    margin-top: 3.125em;
+  }
+
   #social-media span {
     justify-content: flex-start;
   }
@@ -170,7 +170,9 @@
     grid-row: 1 / span 2;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: min-content;
+    gap: 1.25em;
+    align-self: center;
   }
 
   form input, textarea {
@@ -182,14 +184,15 @@
     background-color: var(--color-bg-dark);
     color: var(--color-txt-placeholder);
   }
-  
-  textarea {
-    height: 100%;
+
+  input {
+    height: fit-content;
   }
 
   #input-name {
     grid-column: 1;
     grid-row: 1;
+    align-self: end;
   }
 
   #input-email {
@@ -200,10 +203,20 @@
   button[type="submit"] {
     grid-column: 1;
     grid-row: 3;
+    padding: 0.9375em 0;
+    width: 100%;
+    height: fit-content;
+    align-self: start;
   }
 
   #input-message {
     grid-row: 1 / span 3;
+    align-self: center;
+    height: 100%;
+  }
+
+  #input-name, #input-email, #input-message {
+    margin: 0;
   }
 
   footer {
@@ -211,15 +224,27 @@
     display: flex;
     justify-content: space-between;
   }
-
+  
   .content-container--footer {
     text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  
+  .content-container--footer p:first-of-type {
+    margin: 0;
+  }
 }
 
 @media(min-width: 120em) {
+  .content-container {
+    width: min(100%, 95rem);
+  }
 
+  .landing-page__img,
+  .about-me-section__img {
+    width: 34em;
+    height: 40em;
+  }
 }
