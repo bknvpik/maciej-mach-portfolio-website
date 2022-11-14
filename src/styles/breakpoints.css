@@ -1,0 +1,250 @@
+@media(min-width: 80em) {
+  #nav-mobile {
+    display: none;
+  }
+
+  .line-break {
+    white-space: pre-line;
+  }
+
+  .scroll-snap-start {
+    scroll-margin-top: 7.5em;
+  }
+
+  header {
+    padding: 2.5em 0;
+    background-color: var(--color-bg-dark);
+  }
+
+  .nav-menu {
+    all: unset;
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-menu__link {
+    font-size: 1em;
+    padding: 0;
+  }
+  
+  .content-container {
+    padding-inline: 0;
+    margin-inline: auto;
+    width: min(100%, 73.75rem);
+  }
+
+  .content-container--landing-page {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .landing-page__txt {
+    padding: 0;
+    position: relative;
+  }
+  
+  .landing-page__txt--heading {
+    font-size: 4em;
+  }
+
+  .landing-page__txt--heading::after {
+    content: url(../assets/svg/accent_vector.svg);
+    position: absolute;
+    top: 40%;
+    left: 20%;
+  }
+
+  .landing-page__txt .txt {
+    font-size: 1.5rem;
+  }
+
+  .action-button {
+    padding: 1.25em 1.875em ;
+    width: fit-content;
+    color: black;
+  }
+  
+  .landing-page__img,
+  .about-me-section__img {
+    flex: none;
+    margin-bottom: 0;
+    width: 30em;
+    height: 34.375em;
+  }
+
+  .content-container--intro-section {
+    padding: 6.25em 0;
+  }
+
+  .content-container--about-me-section {
+    flex-direction: row;
+    padding: 6.25em 0;
+    display: flex;
+    gap: 7.5em;
+    align-items: center;
+  }
+
+  article {
+    gap: 1.875em;
+  }
+
+  .article--about-me-section {
+    padding: 0;
+  }
+
+  .action-button--about-me-section {
+    font-size: 0.875em;
+    padding: 0.938em 1.563em;
+  }
+
+  .article--reviews-section {
+    padding: 6.25em 0 3.125em 0;
+  }
+
+  .reviews-section__container {
+    flex-direction: row;
+    gap: 1.25em;
+    padding-bottom: 6.25em;
+  }
+
+  #work-with-me-section {
+    padding: 0;
+  }
+
+  .content-container--work-with-me-section {
+    gap: 1.25em;
+    padding: 6.25em 0;
+  }
+
+  .content-container--work-with-me-section article:nth-of-type(2) {
+    text-align: right;
+  }
+
+  .article--work-with-me-section {
+    padding: 0 0 6.25em 0;
+  }
+
+  .outline-txt {
+    width: calc(50vw + 590px);
+    text-align: right;
+    top: 0;
+    font-size: 8em;
+    padding: 0;
+  }
+
+  .content-container--work-with-me-section article:nth-of-type(2) .outline-txt
+  {
+    text-align: left;
+    left: calc(590px - 50vw);
+  }
+
+  .content-container--contact-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 6.25em 0;
+  }
+
+  .article--contact-section {
+    padding: 0;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  #social-media {
+    grid-column: 1;
+    grid-row: 2;
+    align-items: flex-start;
+  }
+  
+  #social-media h3 {
+    margin-top: 3.125em;
+  }
+
+  #social-media span {
+    justify-content: flex-start;
+  }
+
+  form {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    gap: 1.25em;
+    align-self: center;
+  }
+
+  form input, textarea {
+    width: 100%;
+    font-size: 0.875em;
+    padding: 0.625em;
+    margin-bottom: 1em;
+    border: 1px solid var(--color-bg-review);
+    background-color: var(--color-bg-dark);
+    color: var(--color-txt-placeholder);
+  }
+
+  input {
+    height: fit-content;
+  }
+
+  #input-name {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+  }
+
+  #input-email {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  button[type="submit"] {
+    grid-column: 1;
+    grid-row: 3;
+    padding: 0.9375em 0;
+    width: 100%;
+    height: fit-content;
+    align-self: start;
+  }
+
+  #input-message {
+    grid-row: 1 / span 3;
+    align-self: center;
+    height: 100%;
+  }
+
+  #input-name, #input-email, #input-message {
+    margin: 0;
+  }
+
+  footer {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .content-container--footer {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .content-container--footer p:first-of-type {
+    margin: 0;
+  }
+}
+
+@media(min-width: 120em) {
+  .content-container {
+    width: min(100%, 95rem);
+  }
+
+  .landing-page__img,
+  .about-me-section__img {
+    width: 34em;
+    height: 40em;
+  }
+}
