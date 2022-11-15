@@ -1,9 +1,0 @@
-class ImageComponent {
-  template() {
-    
-  }
-
-  render() {
-
-  }
-}

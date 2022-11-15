@@ -1,4 +1,8 @@
 @media(min-width: 80em) {
+  #main-container {
+    height: calc(100vh - 7.5em);
+  }
+    
   #nav-mobile {
     display: none;
   }
@@ -8,10 +12,11 @@
   }
 
   .scroll-snap-start {
-    scroll-margin-top: 7.5em;
+    scroll-margin-top: 0;
   }
 
   header {
+    position: static;
     padding: 2.5em 0;
     background-color: var(--color-bg-dark);
   }
@@ -32,7 +37,7 @@
     margin-inline: auto;
     width: min(100%, 73.75rem);
   }
-
+  
   .content-container--landing-page {
     flex-direction: row-reverse;
     align-items: center;
@@ -49,10 +54,10 @@
   }
 
   .landing-page__txt--heading::after {
-    content: url(../assets/svg/accent_vector.svg);
+    content: url(../assets/svg/accent_line.svg);
     position: absolute;
-    top: 40%;
-    left: 20%;
+    top: 38%;
+    left: 5%;
   }
 
   .landing-page__txt .txt {
@@ -237,6 +242,13 @@
   }
 }
 
+@media(max-width: 80em) and (orientation: landscape)
+{
+  .nav-menu__link {
+    padding: 1em;
+  }
+}
+
 @media(min-width: 120em) {
   .content-container {
     width: min(100%, 95rem);
@@ -246,5 +258,10 @@
   .about-me-section__img {
     width: 34em;
     height: 40em;
+  }
+  
+  .outline-txt
+  {
+    width: calc(50vw + 760px);
   }
 }
